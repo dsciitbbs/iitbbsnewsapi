@@ -1,6 +1,8 @@
 IIT Bhubaneswar News API
 =====
 
+[![Build Status](https://travis-ci.com/nightawks/IITBBSNewsAPI.svg?branch=master)](https://travis-ci.com/nightawks/IITBBSNewsAPI)
+
 >A JSON API to scrap latest news, events details and notices from <http://www.iitbbs.ac.in>
 
 

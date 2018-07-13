@@ -17,5 +17,4 @@ python:
 install: pip install $(cat requirements.txt)
 
 script:
-  - pep8 .
   - python app.py
