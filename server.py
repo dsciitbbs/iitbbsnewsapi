@@ -10,11 +10,11 @@ app = Flask (__name__)
 @app.route ('/', methods=['GET'])
 def defaultRoute () :
     return jsonify({
-		'author' : 'Aman Pratap Singh'
+		'author' : 'Aman Pratap Singh',
 		'email' : 'amanprtpsingh@gmail.com',
 		'endpoint' : 'https://iitbbs.herokuapp.com',
 	    'project_name' : 'IITBBSNewsAPI',
-		'project_url' : 'https://nightawks.github.io/IITBBSNewsAPI/'
+		'project_url' : 'https://github.com/nightawks/iitbbsnewsapi/'
 	})
 
 ######################
@@ -52,7 +52,7 @@ def noticesRoute () :
 ######################
 @app.route('/<path:dummy>')
 def fallback(dummy):
-    return redirect("http://nightawks.github.io/IITBBSNewsAPI")
+    return redirect("http://iitbbs.herokuapp.com")
 
 
 ######################
