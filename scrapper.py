@@ -98,7 +98,7 @@ class News:
 		anchors = div.find('p').find_all('a')
 
 		response["pdf"] = 'www.iitbbs.ac.in/' + anchors[0]['href'][3:]
-		response["xls"] = 'www.iitbbs.ac.in/' + anchors[0]['href'][3:]
+		response["xls"] = 'www.iitbbs.ac.in/' + anchors[1]['href'][3:]
 
 		return response
 
