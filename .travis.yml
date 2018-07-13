@@ -17,4 +17,4 @@ python:
 install: pip install $(cat requirements.txt)
 
 script:
-  - python app.py
+  - python server.py
