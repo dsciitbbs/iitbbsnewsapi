@@ -13,6 +13,8 @@ IIT Bhubaneswar News API
 	* Return JSONified count, link text and URL of all upcoming events.
 * Notices
 	* Return JSONified count, link text and URL of all available notices.
+* Bus Schedule
+  * Get Latest links of PDF and XLS bus schedule files. 
 
 ## Schema
 All API access is over `HTTPS`, and accessed from the `<https://iitbbs.herokuapp.com>`. All data is sent as JSON.
@@ -93,9 +95,18 @@ Result:
 }
 ```
 
+### `GET: /bus`  
+Result:  
+```json
+{
+  "pdf": "www.iitbbs.ac.in/transportation-fle/transport_1529956769.pdf",
+  "xls": "www.iitbbs.ac.in/transportation-fle/transport_1529956769.pdf"
+}
+```
+
 ## Contributing
 Feel free to submit a pull request or an issue. Sugest new features on issue tracker.
 
 ## License
 
-Built with ♥ by Aman Pratap Singh([@apsknight](http://amanpratapsingh.github.io)) for **nightawks** under [MIT License](http://aps.mit-license.org/)
+Built with ♥ by Aman Pratap Singh([@apsknight](http://github.com/apsknight)) for **nightawks** under [MIT License](http://aps.mit-license.org/)
