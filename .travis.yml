@@ -7,14 +7,17 @@ dist: trusty
 branches:
   only:
     - master
+    
 before_install:
   - sudo apt-get -qq update
-  - pip install -r requirements.txt
 
 python:
   - "2.7"
 
-install: pip install $(cat requirements.txt)
+install: pip install -r requirements.txt
 
-script:
-  - python server.py
+before_script:
+  - export FLASK_APP="$TRAVIS_BUILD_DIR/server.py"
+  - export FLASK_DEBUG=1
+
+script: flask test
