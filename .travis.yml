@@ -1,0 +1,21 @@
+sudo: required
+
+language: python
+
+dist: trusty
+
+branches:
+  only:
+    - master
+before_install:
+  - sudo apt-get -qq update
+  - pip install -r requirements.txt
+
+python:
+  - "2.7"
+
+install: pip install $(cat requirements.txt)
+
+script:
+  - pep8 .
+  - python app.py
