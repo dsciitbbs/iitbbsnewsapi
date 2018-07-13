@@ -88,7 +88,22 @@ class News:
 		response['list'] = result
 		return response
 
+	@staticmethod
+	def getBusSchedule ():
+		response = {}
+		url = 'http://www.iitbbs.ac.in/transportation.php'
+		page = urllib2.urlopen(url)
+		soup = BeautifulSoup(page, 'html.parser')
+		div = soup.find('div', attrs={'class': 'col-md-4'})
+		anchors = div.find('p').find_all('a')
+
+		response["pdf"] = 'www.iitbbs.ac.in/' + anchors[0]['href'][3:]
+		response["xls"] = 'www.iitbbs.ac.in/' + anchors[0]['href'][3:]
+
+		return response
+
 # if __name__ == "__main__":
 # 	print News.getNews()
 # 	print News.getNotices()
 # 	print News.getEvents()
+# 	print News.getBusSchedule()

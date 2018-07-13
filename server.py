@@ -46,6 +46,14 @@ def noticesRoute () :
 	result = News.getNotices()
 	return jsonify (result)
 
+######################
+#       NOTICES      #
+######################
+
+@app.route ('/bus', methods=['GET'])
+def busRoute () :
+	result = News.getBusSchedule()
+	return jsonify (result)
 
 ######################
 #         404        #
