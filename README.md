@@ -1,11 +1,6 @@
 IIT Bhubaneswar News API
 =====
 
-[![License : MIT](https://img.shields.io/npm/l/express.svg)](http://aps.mit-license.org)
-[![Python: 2.7.12](https://img.shields.io/badge/Python-2.7.12-red.svg)](https://www.python.org/downloads/release/python-2712/)
-![](https://img.shields.io/badge/Heroku-deployed-brightgreen.svg)
-[![API: JSON](https://img.shields.io/badge/API%20Type-JSON-orange.svg)](http://www.json.org)
-
 >A JSON API to scrap latest news, events details and notices from <http://www.iitbbs.ac.in>
 
 
@@ -32,29 +27,15 @@ Content-Length: 200
 Via: 1.1 vegur
 
 {
-  "author": "Aman Pratap Singh", 
-  "email": "amanprtpsingh@gmail.com", 
-  "endpoint": "iitbbs.herokuapp.com", 
-  "project_name": "IITBBSNewsAPI", 
-  "project_url": "https://apsknight.github.io/IITBBSNewsAPI", 
-  "website": "https://apsknight.github.io/"
+  'author' : 'Aman Pratap Singh'
+  'email' : 'amanprtpsingh@gmail.com',
+  'endpoint' : 'https://iitbbs.herokuapp.com',
+  'project_name' : 'IITBBSNewsAPI',
+  'project_url' : 'https://nightawks.github.io/IITBBSNewsAPI/'
 }
 ```
 
 ## Endpoints
-
-### `GET: /`  
-Result:  
-```json
-{
-  "author": "Aman Pratap Singh", 
-  "email": "amanprtpsingh@gmail.com", 
-  "endpoint": "iitbbs.herokuapp.com", 
-  "project_name": "IITBBSNewsAPI", 
-  "project_url": "https://apsknight.github.io/IITBBSNewsAPI", 
-  "website": "https://apsknight.github.io/"
-}
-```
 
 ### `GET: /news`  
 Result:  
@@ -112,9 +93,7 @@ Result:
 
 ## Contributing
 Feel free to submit a pull request or an issue. Sugest new features on issue tracker.
-**OR**  
-You can [tweet me](https://twitter.com/ultimateaps) if script deprecate.
 
 ## License
 
-Built with ♥ by Aman Pratap Singh([@apsknight](http://amanpratapsingh.github.io)) under [MIT License](http://aps.mit-license.org/)
+Built with ♥ by Aman Pratap Singh([@apsknight](http://amanpratapsingh.github.io)) for **nightawks** under [MIT License](http://aps.mit-license.org/)
