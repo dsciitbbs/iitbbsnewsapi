@@ -97,8 +97,9 @@ class News:
 		div = soup.find('div', attrs={'class': 'col-md-4'})
 		anchors = div.find('p').find_all('a')
 
-		response["pdf"] = 'www.iitbbs.ac.in/' + anchors[0]['href'][3:]
-		response["xls"] = 'www.iitbbs.ac.in/' + anchors[1]['href'][3:]
+		for anchor in anchors:
+			ftype = 'pdf' if anchor['href'][-3:] == 'pdf' else 'xls' 
+			response[ftype] = 'www.iitbbs.ac.in/' + anchors[0]['href'][3:]
 
 		return response
 
@@ -106,4 +107,4 @@ class News:
 # 	print News.getNews()
 # 	print News.getNotices()
 # 	print News.getEvents()
-# 	print News.getBusSchedule()
+	# print News.getBusSchedule()
