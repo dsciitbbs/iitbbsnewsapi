@@ -123,8 +123,3 @@ class News:
 			return data
 		except Exception as e:
 			return {'status':'404','data':[]}
-# if __name__ == "__main__":
-# 	print News.getNews()
-# 	print News.getNotices()
-# 	print News.getEvents()
-	# print News.getBusSchedule()

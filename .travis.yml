@@ -3,10 +3,6 @@ sudo: required
 language: python
 
 dist: xenial
-
-branches:
-  only:
-    - master
     
 before_install:
   - sudo apt-get -qq update
@@ -15,8 +11,6 @@ before_install:
 python:
   - "2.7"
   - "3.6"
-
-install: pip install $(cat requirements.txt)
 
 script:
   - python server.py & APP_PID=$!
