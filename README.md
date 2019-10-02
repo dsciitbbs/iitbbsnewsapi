@@ -1,7 +1,7 @@
 IIT Bhubaneswar News API
 =====
 
-[![Build Status](https://travis-ci.com/nightawks/iitbbsnewsapi.svg?branch=master)](https://travis-ci.com/nightawks/IITBBSNewsAPI)
+[![Build Status](https://travis-ci.com/dsciitbbs/iitbbsnewsapi.svg?branch=master)](https://travis-ci.com/dsciitbbs/iitbbsnewsapi)
 
 >A JSON API to scrap latest news, events details and notices from <http://www.iitbbs.ac.in>
 
@@ -15,6 +15,8 @@ IIT Bhubaneswar News API
 	* Return JSONified count, link text and URL of all available notices.
 * Bus Schedule
   * Get Latest links of PDF and XLS bus schedule files. 
+* Time table
+  * Get correct timetable of the day on passing your roll number.
 
 ## Schema
 All API access is over `HTTPS`, and accessed from the `<https://iitbbs.herokuapp.com>`. All data is sent as JSON.
