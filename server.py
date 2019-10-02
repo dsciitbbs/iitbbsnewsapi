@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, redirect
+from flask import Flask, jsonify, request, redirect
 from scrapper import News
 
 app = Flask (__name__)
@@ -55,12 +55,18 @@ def busRoute () :
 	result = News.getBusSchedule()
 	return jsonify (result)
 
+@app.route ('/timetable', methods=['GET'])
+def timeTable () :
+	roll = request.args.get('roll')
+	result = News.getTimeTable(roll)
+	return jsonify (result)
+
 ######################
 #         404        #
 ######################
 @app.route('/<path:dummy>')
 def fallback(dummy):
-    return redirect("http://iitbbs.herokuapp.com")
+	return redirect("http://iitbbs.herokuapp.com")
 
 
 ######################
