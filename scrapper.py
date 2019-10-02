@@ -3,6 +3,8 @@ try:
 except ImportError:
 	import urllib2
 from bs4 import BeautifulSoup
+from datetime import datetime
+import json
 
 class News:
 
@@ -106,6 +108,21 @@ class News:
 
 		return response
 
+	@staticmethod
+	def getTimeTable(roll):
+		year = str(min((datetime.now().year- int(roll[0:2]) + 1), 4))
+		today = str(datetime.today().weekday())
+		branch = str(roll[2:4])
+		dual_or_single = str(roll[5:6])
+		dest = "res/" + year + "/" + branch + "/"\
+				+ dual_or_single + "/" + today + ".json"
+		print(dest)
+		try:
+			with open (dest, "r") as f:
+				data = json.loads(f.read())
+			return data
+		except Exception as e:
+			return {'status':'404','data':[]}
 # if __name__ == "__main__":
 # 	print News.getNews()
 # 	print News.getNotices()
