@@ -124,7 +124,7 @@ class News:
 			return data
 		except Exception as e:
 			return {'status':'404','data':[]}
-	
+
 	@staticmethod
 	def getTweets():
 		response = {}
