@@ -5,6 +5,7 @@ except ImportError:
 from bs4 import BeautifulSoup
 from datetime import datetime
 import json
+import twitter
 
 class News:
 
@@ -123,3 +124,11 @@ class News:
 			return data
 		except Exception as e:
 			return {'status':'404','data':[]}
+	
+	@staticmethod
+	def getTweets():
+		response = {}
+		res = twitter.default_function()
+		response['count'] = len(res)
+		response['list'] = res
+		return response

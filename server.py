@@ -1,5 +1,7 @@
 from flask import Flask, jsonify, request, redirect
 from scrapper import News
+import sys
+import json
 
 app = Flask (__name__)
 
@@ -60,6 +62,20 @@ def timeTable () :
 	roll = request.args.get('roll')
 	result = News.getTimeTable(roll)
 	return jsonify (result)
+
+# Hacky solution for Python 2 :\
+@app.route ('/tweets', methods=['GET'])
+def tweets () :
+	result = News.getTweets()
+	if sys.version[0] == 3:
+		return jsonify (result)
+	else:
+		response = app.response_class(
+					response=str(result),
+					status = 200,
+					mimetype='application/json'
+				)
+		return response
 
 ######################
 #         404        #
