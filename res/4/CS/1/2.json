@@ -1,9 +1,12 @@
 {
-	"status":"200",
-	"data":[
-	{"time" : "10:00-12:00",
-	"subject": "Compiler design"},
-	{"time" : "12:00-1:00",
-	"subject": "Advanced Digital System Design"
-	}]
+	"status": "200",
+	"data": [{
+			"time": "10:00-12:00",
+			"subject": "Compiler design"
+		},
+		{
+			"time": "12:00-1:00",
+			"subject": "Advanced Digital System Design"
+		}
+	]
 }

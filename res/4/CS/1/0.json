@@ -1,0 +1,16 @@
+{
+	"status": "200",
+	"data": [{
+			"time": "9:00-10:00",
+			"subject": "Image and Video Processing"
+		},
+		{
+			"time": "11:00-1:00",
+			"subject": "Advanced Digital System Design"
+		},
+		{
+			"time": "4:30-6:30",
+			"subject": "Digital Forensics"
+		}
+	]
+}

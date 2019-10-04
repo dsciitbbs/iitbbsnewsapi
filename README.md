@@ -1,3 +1,4 @@
+
 IIT Bhubaneswar News API
 =====
 
@@ -17,6 +18,8 @@ IIT Bhubaneswar News API
   * Get Latest links of PDF and XLS bus schedule files. 
 * Time table
   * Get correct timetable of the day on passing your roll number.
+* Tweets
+  * Get the latest tweets from IIT Bhubaneswar's official handle via this endpoint.
 
 ## Schema
 All API access is over `HTTPS`, and accessed from the `<https://iitbbs.herokuapp.com>`. All data is sent as JSON.
@@ -106,9 +109,45 @@ Result:
 }
 ```
 
+### `GET: /timetable?roll={roll}`
+Result for roll=16CS01017:
+```json
+{
+  "status":"200",
+  "data":[
+  {
+    "subject":"NSS",
+    "time":"5:30-6:30"
+  },
+  {
+    "subject":"Advanced Algorithms",
+    "time":"2:30-4:30"}
+  ],
+}
+```
+
+### `GET: /tweets..`
+Result:
+```json
+{
+  "count": 30,
+  "list": [
+    {
+      "text":"ISRO chief K Sivan Visit Lingaraj Temple In Bhubaneswar ",
+      "url': 'https://youtu.be/SqmnzroBM6k"
+    }, 
+    {
+      'text': 'ISRO Chief K Sivan On Chandrayaan 2 Mission ', 
+      'url': 'https://youtu.be/PcVqihrWd-c'
+    },.
+    ]
+}
+```
+
 ## Contributing
 Feel free to submit a pull request or an issue. Sugest new features on issue tracker.
 
 ## License
 
-Built with ♥ by Aman Pratap Singh([@apsknight](http://github.com/apsknight)) for **nightawks** under [MIT License](http://aps.mit-license.org/)
+Built with ♥ by Developer Student Club, IIT Bhubaneswar under [MIT License](http://aps.mit-license.org/)  
+Special Thanks to Aman Pratap Singh ([@apsknight](http://github.com/apsknight)) who originally came up with the idea.

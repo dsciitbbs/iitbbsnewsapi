@@ -1,0 +1,20 @@
+{
+	"status": "200",
+	"data": [{
+			"time": "9:00-12:00",
+			"subject": "Compiler Design Lab"
+		},
+		{
+			"time": "12:00-1:00",
+			"subject": "Internet of Things"
+		},
+		{
+			"time": "2:30-4:30",
+			"subject": "Compiler Design"
+		},
+		{
+			"time": "5:30-6:30",
+			"subject": "Digital Forensics"
+		}
+	]
+}

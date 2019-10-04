@@ -1,0 +1,24 @@
+{
+	"status": "200",
+	"data": [{
+			"time": "9:00-11:00",
+			"subject": "Advanced Algorithms"
+		},
+		{
+			"time": "11:00-1:00",
+			"subject": "Internet of Things"
+		},
+		{
+			"time": "2:30-4:30",
+			"subject": "Image and Video Processing"
+		},
+		{
+			"time": "4:30-5:30",
+			"subject": "Advanced Digital System Design"
+		},
+		{
+			"time": "5:30-6:30",
+			"subject": "NSS"
+		}
+	]
+}
