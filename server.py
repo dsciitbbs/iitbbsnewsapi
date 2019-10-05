@@ -12,11 +12,11 @@ app = Flask (__name__)
 @app.route ('/', methods=['GET'])
 def defaultRoute () :
     return jsonify({
-		'author' : 'Aman Pratap Singh',
-		'email' : 'amanprtpsingh@gmail.com',
-		'endpoint' : 'https://iitbbs.herokuapp.com',
+		'author' : 'Developer Student Club, IIT Bhubaneswar',
+		'email' : 'amanprtpsingh@gmail.com/adityapal.nghss@gmail.com',
+		'endpoint' : 'http://dsciitbbs-newsapi.herokuapp.com',
 	    'project_name' : 'IITBBSNewsAPI',
-		'project_url' : 'https://github.com/nightawks/iitbbsnewsapi/'
+		'project_url' : 'https://github.com/dsciitbbs/iitbbsnewsapi/'
 	})
 
 ######################
@@ -82,7 +82,7 @@ def tweets () :
 ######################
 @app.route('/<path:dummy>')
 def fallback(dummy):
-	return redirect("http://iitbbs.herokuapp.com")
+	return redirect("http://dsciitbbs-newsapi.herokuapp.com")
 
 
 ######################

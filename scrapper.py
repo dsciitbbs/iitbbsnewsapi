@@ -111,7 +111,7 @@ class News:
 
 	@staticmethod
 	def getTimeTable(roll):
-		year = str(min((datetime.now().year- int(roll[0:2]) + 1), 4))
+		year = str(min((datetime.now().year%100 - int(roll[0:2]) + 1), 4))
 		today = str(datetime.today().weekday())
 		branch = str(roll[2:4])
 		dual_or_single = str(roll[5:6])

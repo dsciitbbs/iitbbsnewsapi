@@ -36,11 +36,11 @@ Content-Length: 200
 Via: 1.1 vegur
 
 {
-  'author' : 'Aman Pratap Singh'
-  'email' : 'amanprtpsingh@gmail.com',
-  'endpoint' : 'https://iitbbs.herokuapp.com',
+  'author' : 'Developer Student Club, IIT Bhubaneswar'
+  'email' : 'amanprtpsingh@gmail.com/adityapal.nghss@gmail.com',
+  'endpoint' : 'http://dsciitbbs-newsapi.herokuapp.com/',
   'project_name' : 'IITBBSNewsAPI',
-  'project_url' : 'https://nightawks.github.io/IITBBSNewsAPI/'
+  'project_url' : 'https://dsciitbbs.github.io/iitbbsnewsapi/'
 }
 ```
 
