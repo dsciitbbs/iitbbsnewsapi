@@ -60,7 +60,9 @@ def busRoute () :
 @app.route ('/timetable', methods=['GET'])
 def timeTable () :
 	roll = request.args.get('roll')
-	result = News.getTimeTable(roll)
+	subject = request.args.get('subject')
+	day = request.args.get('day')
+	result = News.getTimeTable(roll, subject, day)
 	return jsonify (result)
 
 # Hacky solution for Python 2 :\

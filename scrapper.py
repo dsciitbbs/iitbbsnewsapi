@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import json
 import twitter
+import calendar
 
 class News:
 
@@ -110,19 +111,63 @@ class News:
 		return response
 
 	@staticmethod
-	def getTimeTable(roll):
+	def getTimeTable(roll, subject, day):
+
+		if day is not None:
+			if str.isdigit(day):
+				day = int(day)
+				day = calendar.day_name[day].lower()
+			else:
+				day = day.lower()
+
+		with open("mappings.json","r") as f:
+			subject_map = json.loads(f.read())
+		if subject is not None and subject in subject_map:
+			subject = subject_map[subject]
+
 		year = str(min((datetime.now().year%100 - int(roll[0:2]) + 1), 4))
 		today = str(datetime.today().weekday())
 		branch = str(roll[2:4])
 		dual_or_single = str(roll[5:6])
 		dest = "res/" + year + "/" + branch + "/"\
-				+ dual_or_single + "/" + today + ".json"
-		print(dest)
+				+ dual_or_single + "/" + "data.json"
+
 		try:
 			with open (dest, "r") as f:
 				data = json.loads(f.read())
-			return data
+			if subject is None and day is None:
+				return data
+			elif subject is None:
+				res=[]
+				for subject in data['subjects']:
+					if len(subject['timetable'][day]) != 0:
+						val = {}
+						val['subject'] = subject['subject']
+						val['timings'] = subject['timetable'][day]
+						res.append(val)
+				return {'status':'Ok','subjects':res}
+			elif day is None:
+				res = {}
+				for sub in data['subjects']:
+					if sub['subject']==subject:
+						res = sub['timetable']
+				return {'status':'Ok','data':res}
+			else:
+				res=[]
+				filtered_value = []
+				for sub in data['subjects']:
+					if len(sub['timetable'][day]) != 0:
+						val = {}
+						val['subject'] = sub['subject']
+						val['timings'] = sub['timetable'][day]
+						res.append(val)
+				for result in res:
+					print(result['subject'])
+					if result['subject'] == subject:
+						filtered_value.append(result['timings'])
+				return {'status':'Ok','data':filtered_value}
 		except Exception as e:
+			print(e)
 			return {'status':'404','data':[]}
 
 	@staticmethod

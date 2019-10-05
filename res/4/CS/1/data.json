@@ -1,0 +1,158 @@
+{
+	"status": "Ok",
+	"subjects": [{
+			"subject": "Networks and Systems Security",
+			"timetable": {
+				"monday": {},
+				"tuesday": {
+					"starttime": "17:30",
+					"endtime": "18:30"
+				},
+				"wednesday": {},
+				"thursday": {
+					"starttime": "17:30",
+					"endtime": "18:30"
+				},
+				"friday": {},
+				"saturday": {
+					"starttime": "10:00",
+					"endtime": "12:00"
+				},
+				"sunday": {}
+			}
+		},
+		{
+			"subject": "Advanced Digital System Design",
+			"timetable": {
+				"monday": {
+					"starttime": "11:00",
+					"endtime": "13:00"
+				},
+				"tuesday": {
+					"starttime": "16:30",
+					"endtime": "17:30"
+				},
+				"wednesday": {
+					"starttime": "12:00",
+					"endtime": "13:00"
+				},
+				"thursday": {},
+				"friday": {},
+				"saturday": {},
+				"sunday": {}
+			}
+		},
+		{
+			"subject": "Advanced Algorithms",
+			"timetable": {
+				"monday": {},
+				"tuesday": {
+					"starttime": "09:00",
+					"endtime": "11:00"
+				},
+				"wednesday": {},
+				"thursday": {
+					"starttime": "14:30",
+					"endtime": "16:30"
+				},
+				"friday": {},
+				"saturday": {},
+				"sunday": {}
+			}
+		},
+		{
+			"subject": "Compiler Design",
+			"timetable": {
+				"monday": {},
+				"tuesday": {
+
+				},
+				"wednesday": {
+					"starttime": "10:00",
+					"endtime": "12:00"
+				},
+				"thursday": {},
+				"friday": {
+					"starttime": "14:30",
+					"endtime": "16:30"
+				},
+				"saturday": {},
+				"sunday": {}
+			}
+		},
+		{
+			"subject": "Internet of Things",
+			"timetable": {
+				"monday": {},
+				"tuesday": {
+					"starttime": "11:00",
+					"endtime": "13:00"
+
+				},
+				"wednesday": {},
+				"thursday": {},
+				"friday": {
+					"starttime": "12:00",
+					"endtime": "13:00"
+				},
+				"saturday": {},
+				"sunday": {}
+			}
+		},
+		{
+			"subject": "Image and Video Processing",
+			"timetable": {
+				"monday": {
+					"starttime": "09:00",
+					"endtime": "10:00"
+				},
+				"tuesday": {
+					"starttime": "14:30",
+					"endtime": "16:30"
+
+				},
+				"wednesday": {},
+				"thursday": {},
+				"friday": {},
+				"saturday": {},
+				"sunday": {}
+			}
+		},
+		{
+			"subject": "Digital Forensics",
+			"timetable": {
+				"monday": {
+					"starttime": "14:30",
+					"endtime": "16:30"
+				},
+				"tuesday": {},
+				"wednesday": {},
+				"thursday": {},
+				"friday": {
+					"starttime": "15:30",
+					"endtime": "16:30"
+				},
+				"saturday": {},
+				"sunday": {}
+			}
+		},
+		{
+			"subject": "Labs",
+			"timetable": {
+				"monday": {
+
+				},
+				"tuesday": {},
+				"wednesday": {},
+				"thursday": {},
+				"friday": {
+					"name":"Compiler Design",
+					"starttime": "9:00",
+					"endtime": "12:00"
+				},
+				"saturday": {},
+				"sunday": {}
+			}
+		}
+	]
+}
