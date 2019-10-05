@@ -1,13 +1,20 @@
 from twython import Twython, TwythonError
 import json
 import sys
-
-CREDENTIALS_FILENAME = 'creds.json'
-jf = open(CREDENTIALS_FILENAME)
-creds = json.load(jf)
-jf.close()
+import os
 
 def default_function():
+
+	try:
+		CREDENTIALS_FILENAME = 'creds.json'
+		jf = open(CREDENTIALS_FILENAME)
+		creds = json.load(jf)
+		jf.close()
+	except Exception: #On Heroku, we use config vars. Hopefully this works
+		creds = {}
+		creds['consumer_key'] = os.environ.get('consumer_key')
+		creds['consumer_secret'] = os.environ.get('consumer_secret')
+
 	twitter = Twython(creds['consumer_key'], creds['consumer_secret'])
 	tweets = []
 	try:
